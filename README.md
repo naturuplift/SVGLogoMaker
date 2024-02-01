@@ -32,9 +32,8 @@ The SVG Logo Maker is a command-line application built with Node.js that allows 
 - [Usage](#usage)
 - [Options](#options)
 - [Examples](#examples)
-- [License](#license)
 - [Contributing](#contributing)
-- [Questions](#questions)
+- [License](#license)
 
 ## Installation
 
@@ -103,4 +102,4 @@ This project is licensed under the MIT License. See the [LICENSE][MIT] file for 
 
 [js-code]: <>
 [state-flow]: <https://github.com/naturuplift/svg-logo-maker/blob/main/develop/assets/img/Readme%20Generator%20State%20Diagram%20v1.png>
-[MIT]: <>
+[MIT]: <https://github.com/naturuplift/svg-logo-maker/blob/main/LICENSE>
