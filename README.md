@@ -91,22 +91,15 @@ For a visual representation of the sequence of actions involved in the svg logo 
 
 Feel free to reach out, contribute, or provide feedback to make the Password Generator Project even more robust and user-friendly!
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE][MIT] file for details.
-
 ## Contributing
 
 Contributions to this project are welcome. If you have any ideas, suggestions, or bug reports, please open an issue or submit a pull request.
 
-## Questions
-
-If you have any questions or need assistance, feel free to reach out:
-
--   GitHub: Your GitHub Username
--   Email: your.email@example.com
-
 Happy logo designing with SVG Logo Maker!
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE][MIT] file for details.
 
 [js-code]: <>
 [state-flow]: <https://github.com/naturuplift/svg-logo-maker/blob/main/develop/assets/img/Readme%20Generator%20State%20Diagram%20v1.png>
