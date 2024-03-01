@@ -46,7 +46,7 @@ To use the SVG Logo Maker, follow these steps:
 
 ### 2. Navigate to the project directory:
 ```bash
-cd svg-logo-maker
+cd SVGLogoMaker
 ```
 
 ### 3. Install the required dependencies:
