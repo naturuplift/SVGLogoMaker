@@ -1,70 +1,65 @@
-// Load required modules
-const readline = require('readline');
+// Include packages needed for this application
+const inquirer = require('inquirer');
 const fs = require('fs');
+// import shape classes
+const { Circle, Triangle, Square } = require('./lib/shapes');
 
-// Setup readline to read input from console and output responses
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout,
-});
-
-// function to prompt user
-function getUserInput(prompt) {
-  // return promise
-  return new Promise((resolve) => {
-    //display prompt and wait answer
-    rl.question(prompt, (answer) => {
-      // once answer ready return promise
-      resolve(answer);
-    });
-  });
-} 
-
-// function to create logo
+// Setup inquirer to prompt user input
 async function createLogo() {
-  const text = await getUserInput('Enter up to three characters for the text: ');
-  const textColor = await getUserInput('Enter text color (e.g., "red" or "#FF0000"): ');
-  const shapeOptions = ['circle', 'triangle', 'square'];
-  const shapeInput = await getUserInput(`Choose a shape (${shapeOptions.join(', ')}): `);
-  const shape = shapeOptions.includes(shapeInput) ? shapeInput : 'circle'; // Default to circle if input is invalid
-  const shapeColor = await getUserInput('Enter shape color (e.g., "blue" or "#0000FF"): ');
+  const answers = await inquirer.prompt([
+    {
+      type: 'input',
+      name: 'text',
+      message: 'Enter up to three characters for the text:',
+      // Validate that input is up to three alphabetic characters
+      validate: input => input.length <= 3 && input.length > 0 ? true : 'Text must be up to three characters.'
+    },
+    {
+      type: 'input',
+      name: 'textColor',
+      message: 'Enter text color (e.g., "red" or "#FF0000"):',
+    },
+    {
+      type: 'list', 
+      name: 'shape',
+      message: 'Choose a shape:',
+      choices: ['circle', 'triangle', 'square'],
+    },
+    {
+      type: 'input',
+      name: 'shapeColor',
+      message: 'Enter shape color (e.g., "blue" or "#0000FF"):',
+    }
+  ]);
 
   // Determine text size based on length of text
-  const textSize = Math.max(12, 120 / text.length);
+  const textSize = Math.max(12, 120 / answers.text.length);
 
-  // Generate SVG markup based on selected shape
-  let svg = '';
-  switch (shape) {
+  // Determine shape based on user input and instantiate with color
+  let shape;
+  switch (answers.shape) {
     case 'circle':
-      // If circle, create a circle shape in SVG
-      svg = `<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
-               <circle cx="150" cy="100" r="75" fill="${shapeColor}" />
-               <text x="50%" y="50%" fill="${textColor}" text-anchor="middle" dominant-baseline="middle" font-size="${textSize}px">${text}</text>
-             </svg>`;
+      shape = new Circle(answers.shapeColor);
       break;
     case 'triangle':
-      // If triangle, create a triangle shape in SVG
-      svg = `<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
-               <polygon points="150,25 75,150 225,150" fill="${shapeColor}" />
-               <text x="50%" y="50%" fill="${textColor}" text-anchor="middle" dominant-baseline="middle" font-size="${textSize}px">${text}</text>
-             </svg>`;
+      shape = new Triangle(answers.shapeColor);
       break;
     case 'square':
-      // If square, create a square shape in SVG
-      svg = `<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
-               <rect x="75" y="25" width="150" height="150" fill="${shapeColor}" />
-               <text x="50%" y="50%" fill="${textColor}" text-anchor="middle" dominant-baseline="middle" font-size="${textSize}px">${text}</text>
-             </svg>`;
-      break;
-    default:
+      shape = new Square(answers.shapeColor);
       break;
   }
+
+  // Generate SVG markup with chosen shape and text
+  const svg = `<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+${shape.render()}
+<text x="50%" y="50%" fill="${answers.textColor}" text-anchor="middle" dominant-baseline="middle" font-size="${textSize}px">${answers.text}</text>
+</svg>`;
 
   // Save SVG to logo.svg file
   fs.writeFileSync('logo.svg', svg);
 
+  // message user logo was generated
   console.log('Generated logo.svg');
-  rl.close();
 }
 
 // Call createLogo function to start logo creation
