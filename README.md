@@ -76,7 +76,8 @@ Sample terminal usage to generate SVG logo:
 
 Then the application generates the SVG Logo 'logo.svg' and save SVG in application directory.
 
-Sample generated SVG logo:
+Sample generated SVG logo, a yellow trianglular shape with blue text 'svg':
+
 ![SVGLogoMaker logo](https://github.com/naturuplift/SVGLogoMaker/assets/23546356/7830789e-363c-4561-b7c1-1a00a5176dd1)
 
 ### Use Jest to Test Each Shape Class
