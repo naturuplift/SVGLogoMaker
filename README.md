@@ -58,7 +58,8 @@ cd SVGLogoMaker
 
 ## Usage: How to use the SVG Logo Maker
 
-### Create a yellow triangular logo with white text
+### Create a yellow triangular logo with blue text
+
 Run the SVG Logo Maker in terminal with:
 ```bash
    node index.js
@@ -69,7 +70,8 @@ Then answer questions in terminal:
 -    **Select Shape:** Choose from various shapes for your logo, such a a circle, a square, or a triangle. i.e.: 'triangle'
 -    **Select Shape Color:** Enter either alphabetic for color names or a valid hex color code. i.e.: 'yellow'
 
-Sample terminal usage to generate SVG logo: 
+Sample terminal usage to generate SVG logo:
+
 ![SVGLogoMaker logo generation](https://github.com/naturuplift/SVGLogoMaker/assets/23546356/ab9f2731-aea2-46f3-8a7e-075cbaa4f396)
 
 Then the application generates the SVG Logo 'logo.svg' and save SVG in application directory.
