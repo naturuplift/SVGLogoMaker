@@ -88,7 +88,7 @@ Run the Jest test using command in terminal:
 
 Sample terminal usage to test shape classes using [Jest][jest-test]:
 
-![SVGLogoMaker Jest test](https://github.com/naturuplift/SVGLogoMaker/assets/23546356/82f36adf-3909-466e-843a-fa4381c369e4)
+![SVGLogoMaker Jest test](https://github.com/naturuplift/SVGLogoMaker/assets/23546356/0fe37aee-b528-4849-89ef-63e38d57d14f)
 
 ## State Flow Diagram
 For a visual representation of the sequence of actions involved in the svg logo maker, refer to the [State Flow Diagram][state-flow] provided in the project documentation.
