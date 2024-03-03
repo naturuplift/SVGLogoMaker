@@ -68,9 +68,13 @@ Then answer questions in terminal:
 -    **Select Text Color:** Enter either alphabetic for color names or a valid hex color code. i.e.: 'blue'
 -    **Select Shape:** Choose from various shapes for your logo, such a a circle, a square, or a triangle. i.e.: 'triangle'
 -    **Select Shape Color:** Enter either alphabetic for color names or a valid hex color code. i.e.: 'yellow'
+
+Sample terminal usage to generate SVG logo: 
 ![SVGLogoMaker logo generation](https://github.com/naturuplift/SVGLogoMaker/assets/23546356/ab9f2731-aea2-46f3-8a7e-075cbaa4f396)
 
 Then the application generates the SVG Logo 'logo.svg' and save SVG in application directory.
+
+Sample generated SVG logo:
 ![SVGLogoMaker logo](https://github.com/naturuplift/SVGLogoMaker/assets/23546356/7830789e-363c-4561-b7c1-1a00a5176dd1)
 
 ### Use Jest to Test Each Shape Class
@@ -78,6 +82,8 @@ Run the Jest test using command in terminal:
 ```bash
    npm test
 ```
+
+Sample terminal usage to test shape classes: 
 ![SVGLogoMaker Jest test](https://github.com/naturuplift/SVGLogoMaker/assets/23546356/82f36adf-3909-466e-843a-fa4381c369e4)
 
 ## State Flow Diagram
