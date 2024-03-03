@@ -3,6 +3,9 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 // import shape classes
 const { Circle, Triangle, Square } = require('./lib/shapes');
+// Import validator for additional input validation
+const validator = require('validator');
+
 
 // Setup inquirer to prompt user input
 async function createLogo() {
@@ -18,6 +21,8 @@ async function createLogo() {
       type: 'input',
       name: 'textColor',
       message: 'Enter text color (e.g., "red" or "#FF0000"):',
+      // Validate that input is either alphabetic for color names or a valid hex color code
+      validate: input => validator.isAlpha(input, 'en-US', {ignore: ' '}) || validator.isHexColor(input) ? true : 'Please enter a valid color keyword or hexadecimal number.'
     },
     {
       type: 'list', 
@@ -27,8 +32,10 @@ async function createLogo() {
     },
     {
       type: 'input',
-      name: 'shapeColor',
+      name: 'shapeColor',  
       message: 'Enter shape color (e.g., "blue" or "#0000FF"):',
+      // Validate that input is either alphabetic for color names or a valid hex color code
+      validate: input => validator.isAlpha(input, 'en-US', {ignore: ' '}) || validator.isHexColor(input) ? true : 'Please enter a valid color keyword or hexadecimal number.'
     }
   ]);
 
