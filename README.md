@@ -31,8 +31,6 @@ The SVG Logo Maker is a command-line application built with Node.js that allows 
 - [Demo Video](#demo-video)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Options](#options)
-- [Examples](#examples)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -58,36 +56,29 @@ cd SVGLogoMaker
    npm install
 ```
 
-## Usage
+## Usage: How to use the SVG Logo Maker
 
-To run the SVG Logo Maker, execute the following command in your terminal:
-
+### Create a yellow triangular logo with white text
+Run the SVG Logo Maker in terminal with:
 ```bash
-   node svg-logo-maker.js
+   node index.js
 ```
+Then answer questions in terminal:
+-    **Add Text:** Enter text to be displayed on the logo up to three characters. i.e.: 'svg'
+-    **Select Text Color:** Enter either alphabetic for color names or a valid hex color code. i.e.: 'blue'
+-    **Select Shape:** Choose from various shapes for your logo, such a a circle, a square, or a triangle. i.e.: 'triangle'
+-    **Select Shape Color:** Enter either alphabetic for color names or a valid hex color code. i.e.: 'yellow'
+![SVGLogoMaker logo generation](https://github.com/naturuplift/SVGLogoMaker/assets/23546356/ab9f2731-aea2-46f3-8a7e-075cbaa4f396)
 
-## Options
+Then the application generates the SVG Logo 'logo.svg' and save SVG in application directory.
+![SVGLogoMaker logo](https://github.com/naturuplift/SVGLogoMaker/assets/23546356/7830789e-363c-4561-b7c1-1a00a5176dd1)
 
-The SVG Logo Maker provides the following options:
-
--   Select Shape: Choose from various shapes for your logo, such as circles, squares, or custom shapes.
--   Select Color: Pick a color for your logo from a color palette.
--   Add Text: Enter text to be displayed on the logo, customize fonts, styles, and positioning.
--   Save SVG: Save the generated SVG logo to a file with a specified filename.
-
-## Examples
-
-Here are some examples of how to use the SVG Logo Maker:
-
-### 1. Create a red circular logo with text:
+### Use Jest to Test Each Shape Class
+Run the Jest test using command in terminal:
 ```bash
-   node svg-logo-maker.js
+   npm test
 ```
-
-### 2. Generate a blue square logo with custom text and save it as "my-logo.svg":
-```bash
-   node svg-logo-maker.js --shape square --color blue --text "My Logo" --save my-logo.svg
-```
+![SVGLogoMaker Jest test](https://github.com/naturuplift/SVGLogoMaker/assets/23546356/82f36adf-3909-466e-843a-fa4381c369e4)
 
 ## State Flow Diagram
 For a visual representation of the sequence of actions involved in the svg logo maker, refer to the [State Flow Diagram][state-flow] provided in the project documentation.
