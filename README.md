@@ -43,7 +43,7 @@ To use the SVG Logo Maker, follow these steps:
 
 ### 1. Clone this repository to your local machine:
 ```bash
-   git clone <repository-url>
+   git clone https://github.com/naturuplift/SVGLogoMaker
 ```
 
 ### 2. Navigate to the project directory:
