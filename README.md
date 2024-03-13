@@ -107,5 +107,5 @@ This project is licensed under the MIT License. See the [LICENSE][MIT] file for 
 
 [readme-generator]: <https://drive.google.com/file/d/1GqRstOkyOaPCBN82AsbmAx-IpdhGYCKm/view>
 [jest-test]: <https://jestjs.io/>
-[state-flow]: <https://github.com/naturuplift/svg-logo-maker/blob/main/develop/assets/img/Readme%20Generator%20State%20Diagram%20v1.png>
-[MIT]: <https://github.com/naturuplift/svg-logo-maker/blob/main/LICENSE>
+[state-flow]: <https://github.com/naturuplift/SVGLogoMaker/blob/main/assets/img/Readme%20Generator%20State%20Diagram%20v1.png>
+[MIT]: <https://github.com/naturuplift/SVGLogoMaker/blob/main/LICENSE>
