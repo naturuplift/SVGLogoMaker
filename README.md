@@ -43,7 +43,7 @@ To use the SVG Logo Maker, follow these steps:
 
 ### 1. Clone this repository to your local machine:
 ```bash
-   git clone https://github.com/naturuplift/SVGLogoMaker
+git clone https://github.com/naturuplift/SVGLogoMaker
 ```
 
 ### 2. Navigate to the project directory:
@@ -53,7 +53,7 @@ cd SVGLogoMaker
 
 ### 3. Install the required dependencies:
 ```bash
-   npm install
+npm install
 ```
 
 ## Usage: How to use the SVG Logo Maker
@@ -62,7 +62,7 @@ cd SVGLogoMaker
 
 Run the SVG Logo Maker in terminal with:
 ```bash
-   node index.js
+node index.js
 ```
 Then answer questions in terminal:
 -    **Add Text:** Enter text to be displayed on the logo up to three characters. i.e.: 'svg'
@@ -83,7 +83,7 @@ Sample generated SVG logo, a yellow trianglular shape with blue text 'svg':
 ### Use Jest to Test Each Shape Class
 Run the Jest test using command in terminal:
 ```bash
-   npm test
+npm test
 ```
 
 Sample terminal usage to test shape classes using [Jest][jest-test]:
